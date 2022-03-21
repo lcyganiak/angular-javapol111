@@ -1,0 +1,20 @@
+<ul>
+    <li *ngFor='let num of number' (click)="delet(num)" >
+
+     <p >{{" Jestem numer "+ num}}</p> 
+    </li>
+  </ul>
+  <button (click)="addNumber()" >Add sth</button>
+  <button (click)="bold()">bold</button>
+  <button (click)="show()">show firstName</button>
+  <!-- <div class="wpis" contenteditable="true">
+    
+    <p>{{firstName}}</p>
+  </div> -->
+  <input type="text" name="" id="" [(ngModel)]="firstName"  #ctrl="ngModel">
+
+  <p *ngIf="firstName.length > 15" >{{firstName}}</p>
+  <p [ngClass]="{'blue': firstName.length > 15, 'yellow': firstName.length === 15, 'red': firstName.length > 20}" >{{firstName}}</p>
+
+
+  <!-- Footer -->
